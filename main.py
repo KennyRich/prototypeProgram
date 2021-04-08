@@ -2,7 +2,6 @@ import streamlit as st
 from Authentication.auth import Authentication
 from UserDetails.user import User
 from Transactions.transactions import Transactions
-import time
 from PIL import Image
 
 
@@ -19,7 +18,7 @@ def login(accountNumber: str, pin: str):
     if auth.login() == "OK":
         st.sidebar.success("Successfully logged In")
         user: User = User(accountNumber)
-        st.write(f"## Welcome {user.getFirstname()} {user.getLastName()}")
+        st.write(f"## Welcome {user.getFirstName()} {user.getLastName()}")
         accountDetails(accountNumber)
 
     else:

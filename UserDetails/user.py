@@ -25,7 +25,7 @@ class User:
     def __init__(self, acctNo):
         self.acctNo = acctNo
 
-    def getFirstname(self):
+    def getFirstName(self):
         """
         This returns the First name of the account holder
         :return:
